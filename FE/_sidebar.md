@@ -1,41 +1,13 @@
-- 前端
+<!-- - [Javascript](javascript) -->
 
-  - [Quick start](quickstart.md)
-  - [Writing more pages](more-pages.md)
-  - [Custom navbar](custom-navbar.md)
-  - [Cover page](cover.md)
+<!-- - [Typescript](typescript) -->
+<!-- - [Rxjs](rxjs) -->
+  <!-- - [Node](node) -->
 
-- Customization
-
-  - [Configuration](configuration.md)
-  - [Themes](themes.md)
-  - [List of Plugins](plugins.md)
-  - [Write a Plugin](write-a-plugin.md)
-  - [Markdown configuration](markdown.md)
-  - [Language highlighting](language-highlight.md)
-
-- Guide
-
-  - [Deploy](deploy.md)
-  - [Helpers](helpers.md)
-  - [Vue compatibility](vue.md)
-  - [CDN](cdn.md)
-  - [Offline Mode(PWA)](pwa.md)
-  - [Server-Side Rendering(SSR)](ssr.md)
-  - [Embed Files](embed-files.md)
-
-- [Awesome docsify](awesome.md)
-- [Changelog](changelog.md)
-- [Home](/)
-- [Guide](docs/readme.md)
-
-- 浏览器
-- 算法
-- Angular
-
-  - Basics
-
-    - [Get Start](notes/FE/angular/basics/get-start.md)
-    - [Router](notes/FE/angular/basics/Angular-Router.md "Angular路由")
-
-  - Excel
+- [Npm](FE/npm/yarn.md)
+- [Angular](Angular)
+  <!-- - [Dart](dart) -->
+    <!-- - [Miniprogram](miniprogram) -->
+- [Brower](brower)
+  <!-- - [Algorithms](algorithms) -->
+  <!-- - [Style](style) -->
