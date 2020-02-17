@@ -1,0 +1,1 @@
+Sec-Fetch-Mode: cors
