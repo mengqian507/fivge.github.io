@@ -12,3 +12,4 @@
   - [nx](FE/npm/pkgs/nx.md)
 - Config
 - [Yarn](FE/npm/yarn.md)
+- [Yarn 2](FE/npm/yarn-v2.md)
