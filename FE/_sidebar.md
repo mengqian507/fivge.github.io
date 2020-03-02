@@ -5,7 +5,7 @@
   <!-- - [Node](node) -->
 
 - [Npm](FE/npm/yarn.md)
-- [Angular](Angular)
+- [Angular](FE/angular/basics/get-start.md)
   <!-- - [Dart](dart) -->
     <!-- - [Miniprogram](miniprogram) -->
 - [Brower](brower)

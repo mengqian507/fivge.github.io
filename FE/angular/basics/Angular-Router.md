@@ -68,6 +68,17 @@ this.router.navigate([{ foo: "Bob" }]);
 模块懒加载：在根路由中配置
 
 ```ts
+// angular 8+
+const routes: Routes = [
+  {
+    path: "admin",
+    loadChildren: () => import("./admin/admin.module").then(mod => mod.AdminModule)
+  }
+];
+```
+
+```ts
+// angular 2~7
 const routes: Routes = [
   {
     path: "route",

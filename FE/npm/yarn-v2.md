@@ -18,6 +18,22 @@ yarn 2 相较于 npm 的优点
   - 全新安装 yarn 2
   - yarn 1 升级到 yarn 2
   - npm 过渡到 yarn 2
+
+目前不推荐全局安装 yarn 2，项目内安装：
+
+cd 到项目根目录，然后设置 yarn 版本为 berry
+
+```bash
+### 安装
+yarn policies set-version berry # below v1.22
+yarn set version berry          # on v1.22+
+```
+
+```bash
+### 更新
+yarn set version from sources
+```
+
 - 使用
   - 基本用法
   - 新特性

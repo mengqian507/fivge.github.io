@@ -140,6 +140,10 @@ List<Integer> integers = Collections.unmodifiableList(arrayList);
 
 ---
 
+### 参数传递
+
+[Java调用函数传递参数到底是值传递还是引用传递](https://www.cnblogs.com/wutianqi/p/8723582.html)
+
 ### JUC
 
 #### JUC

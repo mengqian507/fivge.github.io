@@ -49,6 +49,10 @@ ng g c routes/user-info/user-name
 ng g s routes/user-info/user-info
 ```
 
+### pipe
+
+[see more](../excel/pipe.md)
+
 ## angular.json
 
 ---
@@ -61,7 +65,14 @@ yarn add codelyzer -D
 
 ## tsconfig
 
-### @xx
+### @env
+
+
+
+
+
+
+> angular6,7
 
 `tsconfig.json`
 
@@ -93,6 +104,24 @@ compilerOptions: {
     }
 }
 ```
+> angular8+
+
+
+`tsconfig.app.json` 和 `tsconfig.spec.json` 无须再单独设定 `paths` 属性
+
+`tsconfig.app.json`
+
+```json
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": []
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/test.ts", "src/**/*.spec.ts"]
+}
+```
 
 ## package.json
 
@@ -106,7 +135,9 @@ compilerOptions: {
 
 ---
 
-## AntDesign
+## Component
+
+### AntDesign
 
 ```bash
 ng add ng-zorro-antd
@@ -116,20 +147,20 @@ ng add ng-zorro-antd
 
 <https://material.angular.cn/>
 
-## BootStrap
+### BootStrap
 
 <https://github.com/valor-software/ngx-bootstrap>
 
 <https://valor-software.com/ngx-bootstrap/#/documentation#getting-started>
 
-### 安装
+#### 安装
 
 ```bash
 yarn add ngx-bootstrap
 yarn add bootstrap
 ```
 
-### 引用
+#### 引用
 
 angular.json 中添加 css
 
@@ -142,7 +173,7 @@ angular.json 中添加 css
             ],
 ```
 
-### 使用
+#### 使用
 
 按需引用，使用哪个组件，在 module 中引入相应的模块并注册为根组件
 
@@ -170,73 +201,4 @@ import { ButtonsModule } from "ngx-bootstrap";
 
 ## http
 
-### `xmlHttpRequset`(`xhr`)
-
-### `fetch()`
-
-<https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch>
-
-`.service.ts`
-
-```tsx
-import { from } from "rxjs";
-
-// GET
-  fetch() {
-    return from(
-      fetch("http://117.73.12.207:3000/mock/52/users", {
-        method: "GET",
-        headers: {
-          Au: "xx"
-        }
-      })
-    );
-  }
-
-// POST
-  fetchPut() {
-    return from(
-      fetch("http://117.73.12.207:3000/mock/52/user", {
-        method: "PUT",
-        headers: {
-          Au: "xx",
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify([
-          {
-            userName: "laboris aliquip",
-            phone: "culpa aliqua voluptate"
-          },
-          {
-            userName: "elit nisi sint culpa nostrud",
-            phone: "consectetur non"
-          },
-          {
-            userName: "sint",
-            phone: "Excepteur aute"
-          },
-          {
-            userName: "magna",
-            phone: "non"
-          }
-        ])
-      })
-    );
-  }
-```
-
-`.component.ts`
-
-```ts
-  fetch() {
-    this.service.fetch().subscribe();
-  }
-```
-
-> Q&A
-
-<https://stackoverflow.com/questions/36292537/what-is-an-opaque-response-and-what-purpose-does-it-serve>
-
-```json
-'mode': 'no-cors'
-```
+[see more](./http.md)
