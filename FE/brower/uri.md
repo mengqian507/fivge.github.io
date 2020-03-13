@@ -41,6 +41,12 @@
 
 ---
 
+### URLSearchParams
+
+<https://developer.mozilla.org/zh-CN/docs/Web/API/URLSearchParams>
+
+---
+
 其他编码/加密方式
 
 - base64

@@ -6,7 +6,7 @@
 2. 结构型指令 — 通过添加和移除 DOM 元素改变 DOM 布局的指令
 3. 属性型指令 — 改变元素、组件或其它指令的外观和行为的指令。
 
-**组件**是这三种指令中最常用的。
+**组件**是这三种指令中最常用的。组件可以在原生 HTML 元素中管理一小片区域的 HTML。从技术角度说，它就是一个带模板的指令。
 **结构型**指令修改视图的结构。例如，`NgFor` 和 `NgIf` 。
 **属性型**指令改变一个元素的外观或行为。例如，内置的 `NgStyle` 指令可以同时修改元素的多个样式。
 
@@ -183,3 +183,13 @@ export class DocumentModule {}
 > 结构型指令的职责是 HTML 布局。 它们塑造或重塑 DOM 的结构，比如添加、移除或维护这些元素
 
 🎯<https://angular.cn/guide/structural-directives>
+
+> 在一个宿主元素上可以应用多个属性型指令，但只能应用一个结构型指令。
+
+参考 `ngIf` 实现<https://github.com/angular/angular/blob/master/packages/common/src/directives/ng_if.ts>
+
+---
+
+### 扩展
+
+- https://github.com/arkon/ng-inline-svg

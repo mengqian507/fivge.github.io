@@ -87,3 +87,52 @@ import { from } from "rxjs";
 ```json
 'mode': 'no-cors'
 ```
+
+### `websocket`
+
+`.service.ts`
+
+```typescript
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
+
+@Injectable({
+  providedIn: "root"
+})
+export class WebSocketService {
+  ws: WebSocket;
+  private wsUrl: string = `ws:localhost:8081`;
+
+  createObservableSocket(): Observable<any> {
+    this.ws = new WebSocket(this.wsUrl);
+
+    return new Observable(observe => {
+      this.ws.onmessage = event => observe.next(event.data);
+      this.ws.onerror = event => observe.error();
+      this.ws.onclose = event => observe.complete();
+    });
+  }
+
+  sendMessage(message: string) {
+    this.ws.send(message);
+  }
+}
+```
+
+`.component.ts`
+
+```typescript
+  constructor(private ws: WebSocketService) {}
+
+  sendMessageToServer() {
+    this.ws.sendMessage(`send message form angular to express ws server`);
+  }
+
+  ngOnInit() {
+    this.ws.createObservableSocket().subscribe(
+        data => console.log(data),
+        err => console.log(err),
+        () => console.log("ws has ended!")
+      );
+  }
+```

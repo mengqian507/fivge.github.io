@@ -51,7 +51,7 @@ ng g s routes/user-info/user-info
 
 ### pipe
 
-[see more](../excel/pipe.md)
+[see more...](../excel/pipe.md)
 
 ## angular.json
 
@@ -65,14 +65,11 @@ yarn add codelyzer -D
 
 ## tsconfig
 
-### @env
+### 使用绝对路径的路径映射表
 
+> 项目的 `tsconfig.json` 中必须配置好 `baseUrl` 和 `paths` 属性。
 
-
-
-
-
-> angular6,7
+#### angular6,7
 
 `tsconfig.json`
 
@@ -104,8 +101,8 @@ compilerOptions: {
     }
 }
 ```
-> angular8+
 
+#### angular8+
 
 `tsconfig.app.json` 和 `tsconfig.spec.json` 无须再单独设定 `paths` 属性
 
@@ -201,4 +198,4 @@ import { ButtonsModule } from "ngx-bootstrap";
 
 ## http
 
-[see more](./http.md)
+[see more...](./http.md)
